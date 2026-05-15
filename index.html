@@ -2,9 +2,111 @@
 <html>
 <head>
   <title>Valeh Khaledi</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7f2;
+      color: #1f2d1f;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 25px;
+      background-color: white;
+      font-size: 18px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #355e3b;
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px;
+    }
+
+    .hero-text {
+      width: 55%;
+    }
+
+    .hero-text h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+
+    .hero-image img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid white;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 25px;
+      background-color: #557c55;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+  </style>
+
 </head>
+
 <body>
-  <h1>Valeh Khaledi</h1>
-  <p>Postdoctoral researcher working on agroecosystem modelling, hydrology, and climate-resilient land management.</p>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Research</a>
+    <a href="#">Projects</a>
+    <a href="#">Publications</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="hero">
+
+    <div class="hero-text">
+
+      <h1>Valeh Khaledi</h1>
+
+      <p>
+        Postdoctoral researcher working on agroecosystem modelling,
+        hydrology, groundwater dynamics, and climate-resilient land management.
+      </p>
+
+      <a class="button" href="#">
+        Explore My Research
+      </a>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000">
+
+    </div>
+
+  </div>
+
 </body>
 </html>
