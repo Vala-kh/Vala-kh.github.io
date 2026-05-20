@@ -22,18 +22,24 @@
       font-size: 18px;
     }
 
-    .navbar a {
-      text-decoration: none;
-      color: #355e3b;
-      font-weight: bold;
-    }
+.navbar a {
+  text-decoration: none;
+  color: #355e3b;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 80px;
-    }
+.navbar a:hover {
+  color: #6a9b6a;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 90px;
+  gap: 60px;
+}
 
     .hero-text {
       width: 55%;
@@ -67,15 +73,21 @@
     }
 
     .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 25px;
-      background-color: #557c55;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 18px;
-    }
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 25px;
+  background-color: #557c55;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3f5f3f;
+  transform: translateY(-2px);
+}
 
     .cards-section {
       padding: 60px 80px;
@@ -93,13 +105,19 @@
       gap: 25px;
     }
 
-    .card {
-      flex: 1;
-      padding: 30px;
-      border-radius: 18px;
-      background-color: #f5f7f2;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
+.card {
+  flex: 1;
+  padding: 30px;
+  border-radius: 18px;
+  background-color: #f5f7f2;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
 
     .card h3 {
       color: #355e3b;
