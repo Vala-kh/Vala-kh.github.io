@@ -5,7 +5,6 @@
   <title>Valeh Khaledi</title>
 
   <style>
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -22,27 +21,29 @@
       font-size: 18px;
     }
 
-.navbar a {
-  text-decoration: none;
-  color: #355e3b;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
+    .navbar a {
+      text-decoration: none;
+      color: #355e3b;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-.navbar a:hover {
-  color: #6a9b6a;
-}
+    .navbar a:hover {
+      color: #6a9b6a;
+    }
 
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 100px 90px;
-  gap: 60px;
-}
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      padding: 90px 70px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
 
     .hero-text {
-      width: 55%;
+      max-width: 700px;
     }
 
     .hero-text h1 {
@@ -73,24 +74,24 @@
     }
 
     .button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 15px 25px;
-  background-color: #557c55;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 25px;
+      background-color: #557c55;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
 
-.button:hover {
-  background-color: #3f5f3f;
-  transform: translateY(-2px);
-}
+    .button:hover {
+      background-color: #3f5f3f;
+      transform: translateY(-2px);
+    }
 
     .cards-section {
-      padding: 60px 80px;
+      padding: 70px 80px;
       background-color: white;
     }
 
@@ -98,26 +99,31 @@
       font-size: 36px;
       color: #1f2d1f;
       margin-bottom: 30px;
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .cards {
       display: flex;
       gap: 25px;
+      max-width: 1300px;
+      margin: 0 auto;
     }
 
-.card {
-  flex: 1;
-  padding: 30px;
-  border-radius: 18px;
-  background-color: #f5f7f2;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
+    .card {
+      flex: 1;
+      padding: 30px;
+      border-radius: 18px;
+      background-color: #f5f7f2;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-}
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    }
 
     .card h3 {
       color: #355e3b;
@@ -128,9 +134,7 @@
       line-height: 1.6;
       font-size: 18px;
     }
-
   </style>
-
 </head>
 
 <body>
@@ -147,7 +151,6 @@
   <div class="hero">
 
     <div class="hero-text">
-
       <h1>Valeh Khaledi</h1>
 
       <h2>
@@ -165,7 +168,6 @@
       <a class="button" href="#">
         Explore My Research
       </a>
-
     </div>
 
     <div class="hero-image">
@@ -175,14 +177,11 @@
   </div>
 
   <section class="cards-section">
-
     <h2>Research Highlights</h2>
 
     <div class="cards">
-
       <div class="card">
         <h3>Agroecosystem Modelling</h3>
-
         <p>
           Process-based simulations to understand soil, plant,
           water, and climate interactions.
@@ -191,7 +190,6 @@
 
       <div class="card">
         <h3>Hydrology & Groundwater</h3>
-
         <p>
           Exploring how groundwater dynamics influence ecosystem
           functioning and land management.
@@ -200,15 +198,12 @@
 
       <div class="card">
         <h3>Climate-Resilient Landscapes</h3>
-
         <p>
           Testing future management scenarios for more sustainable
           and adaptive agroecosystems.
         </p>
       </div>
-
     </div>
-
   </section>
 
 </body>
