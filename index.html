@@ -284,6 +284,242 @@
   background-color: #557c55;
   color: white;
 }
+    ```css
+.projects-section {
+  padding: 100px 70px;
+  background-color: #eef2ea;
+}
+
+.projects-header {
+  max-width: 1100px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.section-label {
+  margin-bottom: 10px;
+  color: #557c55;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.projects-header h2 {
+  margin: 0 0 22px 0;
+  color: #1f2d1f;
+  font-size: 42px;
+}
+
+.projects-introduction {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #4c5d4c;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-item {
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid rgba(53, 94, 59, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+}
+
+.project-item[open] {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.11);
+}
+
+.project-summary {
+  display: grid;
+  grid-template-columns: 70px 1fr 50px;
+  gap: 25px;
+  align-items: center;
+  padding: 30px 35px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.project-summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-number {
+  color: #9aae9a;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.project-period {
+  display: block;
+  margin-bottom: 7px;
+  color: #6a8b6a;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.project-summary-text h3 {
+  margin: 0 0 8px 0;
+  color: #1f2d1f;
+  font-size: 28px;
+}
+
+.project-summary-text p {
+  margin: 0;
+  color: #667166;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.project-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  color: white;
+  background-color: #557c55;
+  border-radius: 50%;
+  font-size: 27px;
+  font-weight: 300;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-item[open] .project-toggle {
+  background-color: #355e3b;
+  transform: rotate(45deg);
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(360px, 1.1fr);
+  gap: 45px;
+  padding: 10px 35px 40px 35px;
+  border-top: 1px solid #edf0eb;
+}
+
+.project-visual {
+  padding-top: 30px;
+}
+
+.project-visual img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+}
+
+.project-description {
+  padding-top: 30px;
+}
+
+.project-status {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 13px;
+  color: #355e3b;
+  background-color: #eef2ea;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.current-project {
+  color: #2f6337;
+  background-color: #dfeede;
+}
+
+.project-description h4 {
+  margin: 0 0 20px 0;
+  color: #1f2d1f;
+  font-size: 25px;
+  line-height: 1.35;
+}
+
+.project-description p {
+  margin: 0 0 17px 0;
+  color: #465246;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.project-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.project-topics span {
+  padding: 9px 14px;
+  color: #355e3b;
+  background-color: #f1f5ef;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 850px) {
+  .projects-section {
+    padding: 75px 25px;
+  }
+
+  .project-summary {
+    grid-template-columns: 45px 1fr 42px;
+    gap: 14px;
+    padding: 25px 20px;
+  }
+
+  .project-summary-text h3 {
+    font-size: 24px;
+  }
+
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 5px 20px 30px 20px;
+  }
+
+  .project-visual img {
+    height: 270px;
+  }
+}
+
+@media (max-width: 520px) {
+  .project-number {
+    display: none;
+  }
+
+  .project-summary {
+    grid-template-columns: 1fr 40px;
+  }
+
+  .projects-header h2 {
+    font-size: 35px;
+  }
+}
+```
+
   </style>
 </head>
 
@@ -355,7 +591,7 @@
       </div>
     </div>
   </section>
-<section class="position-section" id="projects">
+<section class="position-section" id="current-position">
 
   <div class="position-box">
 
@@ -382,6 +618,313 @@
     </div>
 
   </div>
+```html
+<section class="projects-section" id="projects">
+
+  <div class="projects-header">
+    <p class="section-label">Research Portfolio</p>
+    <h2>Projects</h2>
+
+    <p class="projects-introduction">
+      My research experience spans ecohydrology, agroecosystem modelling,
+      environmental data analysis, soil knowledge systems, and agricultural
+      water management. Select a project below to explore its scientific
+      context, my role, and related visual material.
+    </p>
+  </div>
+
+  <div class="projects-container">
+
+    <!-- NOMOS -->
+    <details class="project-item">
+
+      <summary class="project-summary">
+
+        <div class="project-number">
+          01
+        </div>
+
+        <div class="project-summary-text">
+          <span class="project-period">Since June 2026</span>
+          <h3>NOMOS</h3>
+
+          <p>
+            Ecohydrology and Water Resources Management Group ·
+            Technische Universität Berlin
+          </p>
+        </div>
+
+        <span class="project-toggle">
+          +
+        </span>
+
+      </summary>
+
+      <div class="project-content">
+
+        <div class="project-visual">
+          <img
+            src="nomos-project.jpg"
+            alt="Visual representation of the NOMOS research project">
+        </div>
+
+        <div class="project-description">
+
+          <span class="project-status current-project">
+            Current project
+          </span>
+
+          <h4>
+            New climate extremes and the emergence of a “new normal”
+          </h4>
+
+          <p>
+            NOMOS investigates how climatic and hydrological extremes that were
+            previously considered exceptional may increasingly become recurring
+            or characteristic features of changing climate regimes.
+          </p>
+
+          <p>
+            My work focuses on the interdisciplinary conceptualisation of the
+            “new normal,” including how it is defined, detected, and interpreted
+            across different scientific fields. I examine the transition from
+            historical variability to emerging extreme conditions and consider
+            the implications for hydrological systems, ecosystems, infrastructure,
+            and long-term adaptation.
+          </p>
+
+          <div class="project-topics">
+            <span>Climate extremes</span>
+            <span>Ecohydrology</span>
+            <span>New normal</span>
+            <span>Systematic review</span>
+            <span>Climate adaptation</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <!-- SOILWISE -->
+    <details class="project-item">
+
+      <summary class="project-summary">
+
+        <div class="project-number">
+          02
+        </div>
+
+        <div class="project-summary-text">
+          <span class="project-period">2025–2026</span>
+          <h3>SoilWise</h3>
+
+          <p>
+            Impact Assessment Research Group · Leibniz Centre for
+            Agricultural Landscape Research (ZALF), Germany
+          </p>
+        </div>
+
+        <span class="project-toggle">
+          +
+        </span>
+
+      </summary>
+
+      <div class="project-content">
+
+        <div class="project-visual">
+          <img
+            src="soilwise-project.jpg"
+            alt="Visual representation of the SoilWise research project">
+        </div>
+
+        <div class="project-description">
+
+          <span class="project-status">
+            European research project
+          </span>
+
+          <h4>
+            Soil knowledge, long-term experiments, and impact assessment
+          </h4>
+
+          <p>
+            SoilWise supports the development of accessible and harmonised soil
+            knowledge for research, policy, and sustainable land management.
+          </p>
+
+          <p>
+            My contributions focused on the assessment and documentation of
+            long-term agricultural experiments, research data structures, and
+            approaches for improving the usability of soil-related information.
+            This work connected scientific evidence, metadata organisation, and
+            impact-oriented knowledge exchange.
+          </p>
+
+          <div class="project-topics">
+            <span>Soil knowledge</span>
+            <span>Long-term experiments</span>
+            <span>Metadata</span>
+            <span>Impact assessment</span>
+            <span>Knowledge systems</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <!-- ICAW2 -->
+    <details class="project-item">
+
+      <summary class="project-summary">
+
+        <div class="project-number">
+          03
+        </div>
+
+        <div class="project-summary-text">
+          <span class="project-period">2021–2025</span>
+          <h3>ICaW2</h3>
+
+          <p>
+            Data and Simulation Research Group · Leibniz Centre for
+            Agricultural Landscape Research (ZALF), Germany
+          </p>
+        </div>
+
+        <span class="project-toggle">
+          +
+        </span>
+
+      </summary>
+
+      <div class="project-content">
+
+        <div class="project-visual">
+          <img
+            src="icaw2-project.jpg"
+            alt="Visual representation of the ICaW2 research project">
+        </div>
+
+        <div class="project-description">
+
+          <span class="project-status">
+            Doctoral research project
+          </span>
+
+          <h4>
+            Modelling wet-grassland productivity and biogeochemical fluxes
+          </h4>
+
+          <p>
+            Within ICaW2, I investigated how groundwater conditions, climate,
+            vegetation dynamics, and management affect wet-grassland productivity
+            and biogeochemical processes.
+          </p>
+
+          <p>
+            Using process-based agroecosystem modelling, environmental
+            observations, and climate scenarios, I evaluated biomass production
+            as well as water, carbon, and nitrogen fluxes under contrasting
+            groundwater regimes. The project formed the principal scientific
+            framework of my doctoral research.
+          </p>
+
+          <div class="project-topics">
+            <span>MONICA model</span>
+            <span>Wet grasslands</span>
+            <span>Groundwater</span>
+            <span>Carbon and nitrogen</span>
+            <span>Climate scenarios</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+    <!-- LYSIWATER -->
+    <details class="project-item">
+
+      <summary class="project-summary">
+
+        <div class="project-number">
+          04
+        </div>
+
+        <div class="project-summary-text">
+          <span class="project-period">2019–2021</span>
+          <h3>LysiWater</h3>
+
+          <p>
+            Hydrology Research Group · Agricultural Research, Education and
+            Extension Organization (AREEO), Iran
+          </p>
+        </div>
+
+        <span class="project-toggle">
+          +
+        </span>
+
+      </summary>
+
+      <div class="project-content">
+
+        <div class="project-visual">
+          <img
+            src="lysiwater-project.jpg"
+            alt="Visual representation of the LysiWater research project">
+        </div>
+
+        <div class="project-description">
+
+          <span class="project-status">
+            Agricultural water research
+          </span>
+
+          <h4>
+            Lysimeter-based assessment of crop water requirements
+          </h4>
+
+          <p>
+            LysiWater focused on the measurement and evaluation of crop water
+            requirements under semi-arid environmental conditions using
+            lysimeter experiments.
+          </p>
+
+          <p>
+            My research contributed to estimating evapotranspiration, irrigation
+            demand, and crop coefficients. This work established the experimental
+            and hydrological foundation for my later research on soil–water–plant
+            interactions and process-based environmental modelling.
+          </p>
+
+          <div class="project-topics">
+            <span>Lysimeters</span>
+            <span>Crop water requirement</span>
+            <span>Evapotranspiration</span>
+            <span>Irrigation</span>
+            <span>Hydrology</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </details>
+
+  </div>
+
+</section>
+```
 
 </section>
 <section class="publications-section" id="publications">
