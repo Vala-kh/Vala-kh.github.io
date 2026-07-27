@@ -1,19 +1,41 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Valeh Khaledi</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Valeh Khaledi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #f5f7f2;
       color: #1f2d1f;
     }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* NAVIGATION */
 
     .navbar {
       display: flex;
@@ -22,18 +44,24 @@
       padding: 25px;
       background-color: white;
       font-size: 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     }
 
     .navbar a {
       text-decoration: none;
       color: #355e3b;
-      font-weight: bold;
+      font-weight: 700;
       transition: color 0.3s ease;
     }
 
     .navbar a:hover {
       color: #6a9b6a;
     }
+
+    /* HERO */
 
     .hero {
       display: flex;
@@ -51,34 +79,36 @@
 
     .hero-text h1 {
       font-size: 60px;
-      margin-bottom: 20px;
+      margin: 0 0 20px 0;
     }
 
     .hero-text h2 {
       font-size: 24px;
       color: #557c55;
-      font-weight: normal;
-      margin-top: -10px;
-      margin-bottom: 25px;
+      font-weight: 400;
+      margin: 0 0 25px 0;
+      line-height: 1.4;
     }
 
     .hero-text p {
       font-size: 22px;
       line-height: 1.6;
+      margin-bottom: 0;
     }
 
     .hero-image img {
-      transition: all 0.4s ease;
       width: 350px;
       height: 350px;
       border-radius: 50%;
       object-fit: cover;
       border: 6px solid white;
-      box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease;
     }
+
     .hero-image img:hover {
-  transform: scale(1.03);
-}
+      transform: scale(1.03);
+    }
 
     .button {
       display: inline-block;
@@ -97,18 +127,18 @@
       transform: translateY(-2px);
     }
 
+    /* RESEARCH HIGHLIGHTS */
+
     .cards-section {
       padding: 90px 70px;
       background-color: white;
     }
 
     .cards-section h2 {
+      max-width: 1300px;
+      margin: 0 auto 30px auto;
       font-size: 36px;
       color: #1f2d1f;
-      margin-bottom: 30px;
-      max-width: 1300px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .cards {
@@ -123,985 +153,1215 @@
       padding: 30px;
       border-radius: 18px;
       background-color: #f5f7f2;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       transition: all 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
     }
 
     .card h3 {
       color: #355e3b;
       font-size: 22px;
+      margin-top: 0;
     }
 
     .card p {
       line-height: 1.6;
       font-size: 18px;
+      margin-bottom: 0;
     }
-    .footer {
-  text-align: center;
-  padding: 35px;
-  background-color: #eef2ea;
-  color: #557c55;
-  font-size: 16px;
-}
-  .position-section {
-  padding: 90px 70px;
-  background-color: #f5f7f2;
-}
 
-.position-box {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 45px;
-  background-color: white;
-  border-radius: 22px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-}
+    /* CURRENT POSITION */
 
-.position-box h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
+    .position-section {
+      padding: 90px 70px;
+      background-color: #f5f7f2;
+    }
 
-.position-box h3 {
-  font-size: 24px;
-  color: #557c55;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
+    .position-box {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 45px;
+      background-color: white;
+      border-radius: 22px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
 
-.position-box p {
-  font-size: 19px;
-  line-height: 1.7;
-}
+    .position-box h2 {
+      font-size: 36px;
+      margin: 0 0 15px 0;
+    }
 
-.focus-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
-}
+    .position-box h3 {
+      font-size: 24px;
+      color: #557c55;
+      font-weight: 500;
+      margin: 0 0 20px 0;
+    }
 
-.focus-list span {
-  padding: 10px 16px;
-  background-color: #eef2ea;
-  color: #355e3b;
-  border-radius: 999px;
-  font-size: 16px;
-}
-.publications-section {
-  padding: 90px 70px;
-  background-color: white;
-}
+    .position-box p {
+      font-size: 19px;
+      line-height: 1.7;
+    }
 
-.publications-section h2 {
-  font-size: 36px;
-  margin-bottom: 35px;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
+    .focus-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
 
-.publication-card {
-  max-width: 1100px;
-  margin: 0 auto 30px auto;
-  padding: 35px;
-  border-radius: 20px;
-  background-color: #f5f7f2;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
+    .focus-list span {
+      padding: 10px 16px;
+      background-color: #eef2ea;
+      color: #355e3b;
+      border-radius: 999px;
+      font-size: 16px;
+    }
 
-.publication-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
-}
+    /* PROJECTS */
 
-.publication-card h3 {
-  font-size: 28px;
-  margin-bottom: 18px;
-  color: #1f2d1f;
-}
+    .projects-section {
+      padding: 100px 70px;
+      background-color: #eef2ea;
+    }
 
-.pub-authors {
-  font-size: 18px;
-  color: #557c55;
-}
+    .projects-header {
+      max-width: 1100px;
+      margin: 0 auto 50px auto;
+      text-align: center;
+    }
 
-.pub-journal {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
+    .section-label {
+      margin-bottom: 10px;
+      color: #557c55;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
 
-.pub-button {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #557c55;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
+    .projects-header h2 {
+      margin: 0 0 22px 0;
+      color: #1f2d1f;
+      font-size: 42px;
+    }
 
-.pub-button:hover {
-  background-color: #3f5f3f;
-}
+    .projects-introduction {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #4c5d4c;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .project-item {
+      overflow: hidden;
+      background-color: white;
+      border: 1px solid rgba(53, 94, 59, 0.12);
+      border-radius: 22px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+    }
+
+    .project-item[open] {
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.11);
+    }
+
+    .project-summary {
+      display: grid;
+      grid-template-columns: 70px 1fr 50px;
+      gap: 25px;
+      align-items: center;
+      padding: 30px 35px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .project-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .project-number {
+      color: #9aae9a;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .project-period {
+      display: block;
+      margin-bottom: 7px;
+      color: #6a8b6a;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .project-summary-text h3 {
+      margin: 0 0 8px 0;
+      color: #1f2d1f;
+      font-size: 28px;
+    }
+
+    .project-summary-text p {
+      margin: 0;
+      color: #667166;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .project-toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 42px;
+      height: 42px;
+      color: white;
+      background-color: #557c55;
+      border-radius: 50%;
+      font-size: 27px;
+      font-weight: 300;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .project-item[open] .project-toggle {
+      background-color: #355e3b;
+      transform: rotate(45deg);
+    }
+
+    .project-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 35px;
+      border-top: 1px solid #edf0eb;
+    }
+
+    .project-description {
+      max-width: 900px;
+    }
+
+    .project-status {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 8px 13px;
+      color: #355e3b;
+      background-color: #eef2ea;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .current-project {
+      color: #2f6337;
+      background-color: #dfeede;
+    }
+
+    .project-description h4 {
+      margin: 0 0 20px 0;
+      color: #1f2d1f;
+      font-size: 25px;
+      line-height: 1.35;
+    }
+
+    .project-description p {
+      margin: 0 0 17px 0;
+      color: #465246;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .project-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .project-topics span {
+      padding: 9px 14px;
+      color: #355e3b;
+      background-color: #f1f5ef;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .project-visual {
+      width: 100%;
+    }
+
+    .project-visual a {
+      display: block;
+      width: 100%;
+    }
+
+    .project-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      background-color: white;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+      cursor: zoom-in;
+    }
+
+    .project-image-caption {
+      margin: 12px 0 0 0;
+      color: #667166;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* PUBLICATIONS */
+
+    .publications-section {
+      padding: 90px 70px;
+      background-color: white;
+    }
+
+    .publications-section h2 {
+      max-width: 1100px;
+      margin: 0 auto 35px auto;
+      font-size: 36px;
+    }
+
+    .publication-card {
+      max-width: 1100px;
+      margin: 0 auto 30px auto;
+      padding: 35px;
+      border-radius: 20px;
+      background-color: #f5f7f2;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .publication-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .publication-card h3 {
+      font-size: 28px;
+      margin: 0 0 18px 0;
+      color: #1f2d1f;
+      line-height: 1.35;
+    }
+
+    .pub-authors {
+      font-size: 18px;
+      color: #557c55;
+    }
+
+    .pub-journal {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .pub-button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #557c55;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .pub-button:hover {
+      background-color: #3f5f3f;
+      transform: translateY(-2px);
+    }
+
+    /* CONTACT */
+
     .contact-section {
-  padding: 90px 70px;
-  background-color: #f5f7f2;
-  text-align: center;
-}
+      padding: 90px 70px;
+      background-color: #f5f7f2;
+      text-align: center;
+    }
 
-.contact-section h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
+    .contact-section h2 {
+      font-size: 36px;
+      margin: 0 0 40px 0;
+    }
 
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
 
-.contact-links a {
-  padding: 14px 24px;
-  background-color: white;
-  color: #355e3b;
-  text-decoration: none;
-  border-radius: 14px;
-  font-weight: 600;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
+    .contact-links a {
+      padding: 14px 24px;
+      background-color: white;
+      color: #355e3b;
+      text-decoration: none;
+      border-radius: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
 
-.contact-links a:hover {
-  transform: translateY(-5px);
-  background-color: #557c55;
-  color: white;
-}
-    ```css
-.projects-section {
-  padding: 100px 70px;
-  background-color: #eef2ea;
-}
+    .contact-links a:hover {
+      transform: translateY(-5px);
+      background-color: #557c55;
+      color: white;
+    }
 
-.projects-header {
-  max-width: 1100px;
-  margin: 0 auto 50px auto;
-  text-align: center;
-}
+    /* FOOTER */
 
-.section-label {
-  margin-bottom: 10px;
-  color: #557c55;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+    .footer {
+      text-align: center;
+      padding: 35px;
+      background-color: #eef2ea;
+      color: #557c55;
+      font-size: 16px;
+    }
 
-.projects-header h2 {
-  margin: 0 0 22px 0;
-  color: #1f2d1f;
-  font-size: 42px;
-}
+    .footer p {
+      margin: 0;
+    }
 
-.projects-introduction {
-  max-width: 800px;
-  margin: 0 auto;
-  color: #4c5d4c;
-  font-size: 18px;
-  line-height: 1.7;
-}
+    /* RESPONSIVE DESIGN */
 
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+    @media (max-width: 1000px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 45px;
+      }
 
-.project-item {
-  overflow: hidden;
-  background-color: white;
-  border: 1px solid rgba(53, 94, 59, 0.12);
-  border-radius: 22px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
-}
+      .cards {
+        flex-direction: column;
+      }
 
-.project-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
-}
+      .navbar {
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+    }
 
-.project-item[open] {
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.11);
-}
+    @media (max-width: 850px) {
+      .hero,
+      .cards-section,
+      .position-section,
+      .projects-section,
+      .publications-section,
+      .contact-section {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
 
-.project-summary {
-  display: grid;
-  grid-template-columns: 70px 1fr 50px;
-  gap: 25px;
-  align-items: center;
-  padding: 30px 35px;
-  cursor: pointer;
-  list-style: none;
-}
+      .hero {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
 
-.project-summary::-webkit-details-marker {
-  display: none;
-}
+      .hero-text h1 {
+        font-size: 46px;
+      }
 
-.project-number {
-  color: #9aae9a;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
+      .hero-text p {
+        font-size: 19px;
+      }
 
-.project-period {
-  display: block;
-  margin-bottom: 7px;
-  color: #6a8b6a;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-}
+      .hero-image img {
+        width: 280px;
+        height: 280px;
+      }
 
-.project-summary-text h3 {
-  margin: 0 0 8px 0;
-  color: #1f2d1f;
-  font-size: 28px;
-}
+      .project-summary {
+        grid-template-columns: 45px 1fr 42px;
+        gap: 14px;
+        padding: 25px 20px;
+      }
 
-.project-summary-text p {
-  margin: 0;
-  color: #667166;
-  font-size: 16px;
-  line-height: 1.5;
-}
+      .project-summary-text h3 {
+        font-size: 24px;
+      }
 
-.project-toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 42px;
-  height: 42px;
-  color: white;
-  background-color: #557c55;
-  border-radius: 50%;
-  font-size: 27px;
-  font-weight: 300;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
+      .project-content {
+        padding: 30px 20px;
+      }
 
-.project-item[open] .project-toggle {
-  background-color: #355e3b;
-  transform: rotate(45deg);
-}
+      .position-box,
+      .publication-card {
+        padding: 28px;
+      }
+    }
 
-.project-content {
-  display: grid;
-  grid-template-columns: minmax(300px, 0.9fr) minmax(360px, 1.1fr);
-  gap: 45px;
-  padding: 10px 35px 40px 35px;
-  border-top: 1px solid #edf0eb;
-}
+    @media (max-width: 520px) {
+      .navbar {
+        font-size: 15px;
+        gap: 15px;
+        padding: 18px 12px;
+      }
 
-.project-visual {
-  padding-top: 30px;
-}
+      .hero-text h1 {
+        font-size: 38px;
+      }
 
-.project-visual img {
-  display: block;
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
-}
+      .hero-text h2 {
+        font-size: 19px;
+      }
 
-.project-description {
-  padding-top: 30px;
-}
+      .hero-image img {
+        width: 230px;
+        height: 230px;
+      }
 
-.project-status {
-  display: inline-block;
-  margin-bottom: 16px;
-  padding: 8px 13px;
-  color: #355e3b;
-  background-color: #eef2ea;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 700;
-}
+      .project-number {
+        display: none;
+      }
 
-.current-project {
-  color: #2f6337;
-  background-color: #dfeede;
-}
+      .project-summary {
+        grid-template-columns: 1fr 40px;
+      }
 
-.project-description h4 {
-  margin: 0 0 20px 0;
-  color: #1f2d1f;
-  font-size: 25px;
-  line-height: 1.35;
-}
+      .projects-header h2,
+      .cards-section h2,
+      .position-box h2,
+      .publications-section h2,
+      .contact-section h2 {
+        font-size: 32px;
+      }
 
-.project-description p {
-  margin: 0 0 17px 0;
-  color: #465246;
-  font-size: 17px;
-  line-height: 1.75;
-}
-
-.project-topics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 25px;
-}
-
-.project-topics span {
-  padding: 9px 14px;
-  color: #355e3b;
-  background-color: #f1f5ef;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-@media (max-width: 850px) {
-  .projects-section {
-    padding: 75px 25px;
-  }
-
-  .project-summary {
-    grid-template-columns: 45px 1fr 42px;
-    gap: 14px;
-    padding: 25px 20px;
-  }
-
-  .project-summary-text h3 {
-    font-size: 24px;
-  }
-
-  .project-content {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 5px 20px 30px 20px;
-  }
-
-  .project-visual img {
-    height: 270px;
-  }
-}
-
-@media (max-width: 520px) {
-  .project-number {
-    display: none;
-  }
-
-  .project-summary {
-    grid-template-columns: 1fr 40px;
-  }
-
-  .projects-header h2 {
-    font-size: 35px;
-  }
-}
-```
-
+      .publication-card h3 {
+        font-size: 23px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="navbar">
-    <a href="index.html">Home</a>
+  <nav class="navbar">
+    <a href="#home">Home</a>
     <a href="about.html">About</a>
-    <a href="index.html#research">Research</a>
-    <a href="#">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
     <a href="#publications">Publications</a>
-    <a href="index.html#contact">Contact</a>
-  </div>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <div class="hero">
+  <main>
 
-    <div class="hero-text">
-      <h1>Valeh Khaledi</h1>
+    <section class="hero" id="home">
 
-      <h2>
-        Agroecosystem Modelling · Hydrology · Environmental Data Science
-      </h2>
+      <div class="hero-text">
+        <h1>Valeh Khaledi</h1>
 
-      <p>
-        I’m a postdoctoral researcher working at the intersection of
-        agroecosystem modelling, hydrology, groundwater dynamics, and
-        climate-resilient land management. My work uses process-based
-        simulations and environmental data to explore sustainable futures
-        for managed landscapes.
-      </p>
+        <h2>
+          Agroecosystem Modelling · Hydrology · Environmental Data Science
+        </h2>
 
-      <a class="button" href="#">
-        Explore My Research
-      </a>
-    </div>
-
-    <div class="hero-image">
-      <img src="profile.jpeg">
-    </div>
-
-  </div>
-
-  <section class="cards-section">
-    <h2>Research Highlights</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Agroecosystem Modelling</h3>
         <p>
-          Process-based simulations to understand soil, plant,
-          water, and climate interactions.
+          I’m a postdoctoral researcher working at the intersection of
+          agroecosystem modelling, hydrology, groundwater dynamics, and
+          climate-resilient land management. My work uses process-based
+          simulations and environmental data to explore sustainable futures
+          for managed landscapes.
         </p>
+
+        <a class="button" href="#research">
+          Explore My Research
+        </a>
       </div>
 
-      <div class="card">
-        <h3>Hydrology & Groundwater</h3>
-        <p>
-          Exploring how groundwater dynamics influence ecosystem
-          functioning and land management.
-        </p>
+      <div class="hero-image">
+        <img
+          src="profile.jpeg"
+          alt="Portrait of Valeh Khaledi">
       </div>
 
-      <div class="card">
-        <h3>Climate-Resilient Landscapes</h3>
-        <p>
-          Testing future management scenarios for more sustainable
-          and adaptive agroecosystems.
-        </p>
+    </section>
+
+    <section class="cards-section" id="research">
+
+      <h2>Research Highlights</h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Agroecosystem Modelling</h3>
+
+          <p>
+            Process-based simulations to understand soil, plant,
+            water, and climate interactions.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Hydrology & Groundwater</h3>
+
+          <p>
+            Exploring how groundwater dynamics influence ecosystem
+            functioning and land management.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Climate-Resilient Landscapes</h3>
+
+          <p>
+            Testing future management scenarios for more sustainable
+            and adaptive agroecosystems.
+          </p>
+        </div>
+
       </div>
-    </div>
-  </section>
-<section class="position-section" id="current-position">
 
-  <div class="position-box">
+    </section>
 
-    <h2>Current Position</h2>
+    <section class="position-section" id="current-position">
 
-    <h3>Postdoctoral Researcher · Technische Universität Berlin</h3>
+      <div class="position-box">
+
+        <h2>Current Position</h2>
+
+        <h3>
+          Postdoctoral Researcher · Technische Universität Berlin
+        </h3>
+
+        <p>
+          My current research focuses on the application of process-based
+          modelling to investigate hydrological processes, groundwater
+          dynamics, ecosystem responses, and climate-resilient land management
+          under changing environmental conditions.
+        </p>
+
+        <p>
+          Building on my previous work on wet grasslands, peatlands, and
+          groundwater-driven ecosystem dynamics, I study how managed landscapes
+          respond to shifts in climate and disturbance regimes associated with
+          the “new normal,” including changing precipitation patterns, water
+          availability, and extreme events.
+        </p>
+
+        <div class="focus-list">
+          <span>Agroecosystem modelling</span>
+          <span>Hydrology</span>
+          <span>Groundwater dynamics</span>
+          <span>Climate resilience</span>
+          <span>Environmental data science</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="projects-section" id="projects">
+
+      <div class="projects-header">
+
+        <p class="section-label">
+          Research Portfolio
+        </p>
+
+        <h2>Projects</h2>
+
+        <p class="projects-introduction">
+          My research experience spans ecohydrology, agroecosystem modelling,
+          environmental data analysis, soil knowledge systems, and agricultural
+          water management. Select a project below to explore its scientific
+          context, my role, and related visual material.
+        </p>
+
+      </div>
+
+      <div class="projects-container">
+
+        <!-- NOMOS -->
+
+        <details class="project-item">
+
+          <summary class="project-summary">
+
+            <div class="project-number">
+              01
+            </div>
+
+            <div class="project-summary-text">
+              <span class="project-period">Since June 2026</span>
+
+              <h3>NOMOS</h3>
+
+              <p>
+                Ecohydrology and Water Resources Management Group ·
+                Technische Universität Berlin
+              </p>
+            </div>
+
+            <span class="project-toggle">
+              +
+            </span>
+
+          </summary>
+
+          <div class="project-content">
+
+            <div class="project-description">
+
+              <span class="project-status current-project">
+                Current project
+              </span>
+
+              <h4>
+                New climate extremes and the emergence of a “new normal”
+              </h4>
+
+              <p>
+                NOMOS investigates how climatic and hydrological extremes that
+                were previously considered exceptional may increasingly become
+                recurring or characteristic features of changing climate regimes.
+              </p>
+
+              <p>
+                My work focuses on the interdisciplinary conceptualisation of
+                the “new normal,” including how it is defined, detected, and
+                interpreted across different scientific fields. I examine the
+                transition from historical variability to emerging extreme
+                conditions and consider the implications for hydrological systems,
+                ecosystems, infrastructure, and long-term adaptation.
+              </p>
+
+              <div class="project-topics">
+                <span>Climate extremes</span>
+                <span>Ecohydrology</span>
+                <span>New normal</span>
+                <span>Systematic review</span>
+                <span>Climate adaptation</span>
+              </div>
+
+            </div>
+
+            <div class="project-visual">
+
+              <a
+                href="nomos-project.png"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <img
+                  src="nomos-project.png"
+                  alt="NOMOS project overview showing climate extremes, impacts, recent temperature anomalies, and adaptation pathways">
+
+              </a>
+
+              <p class="project-image-caption">
+                NOMOS project overview. Click the figure to open it at full resolution.
+              </p>
+
+            </div>
+
+          </div>
+
+        </details>
+
+        <!-- SOILWISE -->
+
+        <details class="project-item">
+
+          <summary class="project-summary">
+
+            <div class="project-number">
+              02
+            </div>
+
+            <div class="project-summary-text">
+              <span class="project-period">2025–2026</span>
+
+              <h3>SoilWise</h3>
+
+              <p>
+                Impact Assessment Research Group · Leibniz Centre for
+                Agricultural Landscape Research (ZALF), Germany
+              </p>
+            </div>
+
+            <span class="project-toggle">
+              +
+            </span>
+
+          </summary>
+
+          <div class="project-content">
+
+            <div class="project-description">
+
+              <span class="project-status">
+                European research project
+              </span>
+
+              <h4>
+                Soil knowledge, long-term experiments, and impact assessment
+              </h4>
+
+              <p>
+                SoilWise supports the development of accessible and harmonised
+                soil knowledge for research, policy, and sustainable land
+                management.
+              </p>
+
+              <p>
+                My contributions focused on the assessment and documentation of
+                long-term agricultural experiments, research data structures,
+                and approaches for improving the discoverability and usability
+                of soil-related information. This work connected scientific
+                evidence, metadata organisation, FAIR data principles, and
+                impact-oriented knowledge exchange.
+              </p>
+
+              <div class="project-topics">
+                <span>FAIR data</span>
+                <span>Soil knowledge</span>
+                <span>Long-term experiments</span>
+                <span>Metadata</span>
+                <span>Impact assessment</span>
+                <span>Knowledge systems</span>
+              </div>
+
+            </div>
+
+            <div class="project-visual">
+
+              <a
+                href="soilwise-project.png"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <img
+                  src="soilwise-project.png"
+                  alt="SoilWise project overview showing FAIR data principles, the SoilWise Catalogue, and reuse of long-term experiment data">
+
+              </a>
+
+              <p class="project-image-caption">
+                SoilWise project overview. Click the figure to open it at full resolution.
+              </p>
+
+            </div>
+
+          </div>
+
+        </details>
+
+        <!-- ICAW2 -->
+
+        <details class="project-item">
+
+          <summary class="project-summary">
+
+            <div class="project-number">
+              03
+            </div>
+
+            <div class="project-summary-text">
+              <span class="project-period">2021–2025</span>
+
+              <h3>ICaW2</h3>
+
+              <p>
+                Data and Simulation Research Group · Leibniz Centre for
+                Agricultural Landscape Research (ZALF), Germany
+              </p>
+            </div>
+
+            <span class="project-toggle">
+              +
+            </span>
+
+          </summary>
+
+          <div class="project-content">
+
+            <div class="project-description">
+
+              <span class="project-status">
+                Doctoral research project
+              </span>
+
+              <h4>
+                Modelling wet-grassland productivity and biogeochemical fluxes
+              </h4>
+
+              <p>
+                Within ICaW2, I investigated how groundwater conditions,
+                climate, vegetation dynamics, and management affect
+                wet-grassland productivity and biogeochemical processes.
+              </p>
+
+              <p>
+                Using process-based agroecosystem modelling, environmental
+                observations, lysimeter experiments, and climate scenarios,
+                I evaluated biomass production as well as water, carbon, and
+                nitrogen fluxes under contrasting groundwater regimes. The
+                project formed the principal scientific framework of my
+                doctoral research.
+              </p>
+
+              <div class="project-topics">
+                <span>MONICA model</span>
+                <span>GRASSMIND</span>
+                <span>Wet grasslands</span>
+                <span>Groundwater</span>
+                <span>Carbon and nitrogen</span>
+                <span>Climate scenarios</span>
+              </div>
+
+            </div>
+
+            <div class="project-visual">
+
+              <a
+                href="icaw2-project.png"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <img
+                  src="icaw2-project.png"
+                  alt="ICaW2 project overview showing the MONICA and GRASSMIND coupling system, wet-grassland simulations, and lysimeter infrastructure">
+
+              </a>
+
+              <p class="project-image-caption">
+                ICaW2 project overview. Click the figure to open it at full resolution.
+              </p>
+
+            </div>
+
+          </div>
+
+        </details>
+
+        <!-- LYSIWATER -->
+
+        <details class="project-item">
+
+          <summary class="project-summary">
+
+            <div class="project-number">
+              04
+            </div>
+
+            <div class="project-summary-text">
+              <span class="project-period">2019–2021</span>
+
+              <h3>LysiWater</h3>
+
+              <p>
+                Hydrology Research Group · Agricultural Research, Education
+                and Extension Organization (AREEO), Iran
+              </p>
+            </div>
+
+            <span class="project-toggle">
+              +
+            </span>
+
+          </summary>
+
+          <div class="project-content">
+
+            <div class="project-description">
+
+              <span class="project-status">
+                Agricultural water research
+              </span>
+
+              <h4>
+                Lysimeter-based assessment of crop water requirements
+              </h4>
+
+              <p>
+                LysiWater focused on the establishment of a lysimeter station
+                and the measurement of crop water requirements under semi-arid
+                environmental conditions in Kurdistan Province, Iran.
+              </p>
+
+              <p>
+                My research contributed to estimating evapotranspiration,
+                irrigation demand, canopy development, and crop coefficients
+                for strawberry. This work established the experimental and
+                hydrological foundation for my later research on
+                soil–water–plant interactions and process-based environmental
+                modelling.
+              </p>
+
+              <div class="project-topics">
+                <span>Lysimeters</span>
+                <span>Crop water requirement</span>
+                <span>Evapotranspiration</span>
+                <span>Crop coefficient</span>
+                <span>Strawberry</span>
+                <span>Irrigation</span>
+                <span>Hydrology</span>
+              </div>
+
+            </div>
+
+            <div class="project-visual">
+
+              <a
+                href="lysiwater-project.png"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <img
+                  src="lysiwater-project.png"
+                  alt="LysiWater project overview showing lysimeter station establishment, the study area in Kurdistan Province, and strawberry crop coefficients">
+
+              </a>
+
+              <p class="project-image-caption">
+                LysiWater project overview. Click the figure to open it at full resolution.
+              </p>
+
+            </div>
+
+          </div>
+
+        </details>
+
+      </div>
+
+    </section>
+
+    <section class="publications-section" id="publications">
+
+      <h2>Selected Publications</h2>
+
+      <div class="publication-card">
+
+        <h3>
+          The sensitivity of shallow-groundwater grasslands to changes in
+          climate and groundwater management
+        </h3>
+
+        <p class="pub-authors">
+          Khaledi, V., Raza, A., Taubert, F., et al., Nendel, C.
+        </p>
+
+        <p class="pub-journal">
+          Agricultural Water Management · 2026
+        </p>
+
+        <a
+          class="pub-button"
+          href="https://www.sciencedirect.com/science/article/pii/S0378377426003604"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Publication
+        </a>
+
+      </div>
+
+      <div class="publication-card">
+
+        <h3>
+          Modelling wet grassland biogeochemical fluxes and productivity for
+          climate change mitigation
+        </h3>
+
+        <p class="pub-authors">
+          Khaledi, V.
+        </p>
+
+        <p class="pub-journal">
+          Doctoral Dissertation · University of Potsdam
+        </p>
+
+        <a
+          class="pub-button"
+          href="https://publishup.uni-potsdam.de/frontdoor/index/index/docId/69793"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Thesis
+        </a>
+
+      </div>
+
+      <div class="publication-card">
+
+        <h3>
+          Evaluating MONICA's capability to simulate water, carbon and nitrogen
+          fluxes in a wet grassland at contrasting water tables
+        </h3>
+
+        <p class="pub-authors">
+          Khaledi, V., Baatz, R., Antonijević, D., Hoffmann, M., Dietrich, O.,
+          Lischeid, G., &amp; Nendel, C.
+        </p>
+
+        <p class="pub-journal">
+          Science of the Total Environment · 2024
+        </p>
+
+        <a
+          class="pub-button"
+          href="https://doi.org/10.1016/j.scitotenv.2024.174995"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Publication
+        </a>
+
+      </div>
+
+      <div class="publication-card">
+
+        <h3>
+          Challenges of Including Wet Grasslands with Variable Groundwater
+          Tables in Large-Area Crop Production Simulations
+        </h3>
+
+        <p class="pub-authors">
+          Khaledi, V., Kamali, B., Lischeid, G., Dietrich, O., Davies, M. F.,
+          &amp; Nendel, C.
+        </p>
+
+        <p class="pub-journal">
+          Agriculture · 2024
+        </p>
+
+        <a
+          class="pub-button"
+          href="https://doi.org/10.3390/agriculture14050679"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Publication
+        </a>
+
+      </div>
+
+      <div class="publication-card">
+
+        <h3>
+          Wet grassland biomass yield prediction considering species
+          composition dynamics
+        </h3>
+
+        <p class="pub-authors">
+          Khaledi, V., Lischeid, G., Kamali, B., Dietrich, O.,
+          &amp; Nendel, C.
+        </p>
+
+        <p class="pub-journal">
+          EGU General Assembly · 2023
+        </p>
+
+        <a
+          class="pub-button"
+          href="https://doi.org/10.5194/egusphere-egu23-9070"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Publication
+        </a>
+
+      </div>
+
+      <div class="publication-card">
+
+        <h3>
+          Determination of water requirement and crop coefficient for
+          strawberry using lysimeter experiment in a semi-arid climate
+        </h3>
+
+        <p class="pub-authors">
+          Amini, A., Karami, F., Sedri, M. H., &amp; Khaledi, V.
+        </p>
+
+        <p class="pub-journal">
+          H2Open Journal · 2022
+        </p>
+
+        <a
+          class="pub-button"
+          href="https://doi.org/10.2166/h2oj.2022.030"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Publication
+        </a>
+
+      </div>
+
+    </section>
+
+    <section class="contact-section" id="contact">
+
+      <h2>Contact</h2>
+
+      <div class="contact-links">
+
+        <a href="mailto:Valeh.khaledi@tu-berlin.de">
+          Email
+        </a>
+
+        <a
+          href="https://github.com/Vala-kh"
+          target="_blank"
+          rel="noopener noreferrer">
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/valeh-khaledi-b57b64131/"
+          target="_blank"
+          rel="noopener noreferrer">
+          LinkedIn
+        </a>
+
+        <a
+          href="https://scholar.google.com/citations?user=G4EZCBEAAAAJ&amp;hl=en"
+          target="_blank"
+          rel="noopener noreferrer">
+          Google Scholar
+        </a>
+
+        <a
+          href="https://www.researchgate.net/profile/Valeh-Khaledi?ev=hdr_xprf&amp;_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoiaG9tZSIsInBvc2l0aW9uIjoiZ2xvYmFsSGVhZGVyIn19"
+          target="_blank"
+          rel="noopener noreferrer">
+          ResearchGate
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
 
     <p>
-      My current research focuses on the application of process-based modelling 
-      to investigate hydrological processes, groundwater dynamics, ecosystem 
-      responses, and climate-resilient land management under changing environmental conditions.
-      Building on my previous work on wet grasslands, peatlands, and groundwater-driven 
-      ecosystem dynamics, I study how managed landscapes respond to shifts in 
-      climate and disturbance regimes associated with the “new normal,” including changing 
-      precipitation patterns, water availability, and extreme events. 
+      © 2026 Valeh Khaledi · Agroecosystem Modelling · Hydrology · TU Berlin
     </p>
 
-    <div class="focus-list">
-      <span>Agroecosystem modelling</span>
-      <span>Hydrology</span>
-      <span>Groundwater dynamics</span>
-      <span>Climate resilience</span>
-      <span>Environmental data science</span>
-    </div>
+  </footer>
 
-  </div>
-```html
-<section class="projects-section" id="projects">
-
-  <div class="projects-header">
-    <p class="section-label">Research Portfolio</p>
-    <h2>Projects</h2>
-
-    <p class="projects-introduction">
-      My research experience spans ecohydrology, agroecosystem modelling,
-      environmental data analysis, soil knowledge systems, and agricultural
-      water management. Select a project below to explore its scientific
-      context, my role, and related visual material.
-    </p>
-  </div>
-
-  <div class="projects-container">
-
-    <!-- NOMOS -->
-    <details class="project-item">
-
-      <summary class="project-summary">
-
-        <div class="project-number">
-          01
-        </div>
-
-        <div class="project-summary-text">
-          <span class="project-period">Since June 2026</span>
-          <h3>NOMOS</h3>
-
-          <p>
-            Ecohydrology and Water Resources Management Group ·
-            Technische Universität Berlin
-          </p>
-        </div>
-
-        <span class="project-toggle">
-          +
-        </span>
-
-      </summary>
-
-      <div class="project-content">
-
-        <div class="project-visual">
-          <img
-            src="nomos-project.png"
-            alt="Visual representation of the NOMOS research project">
-        </div>
-
-        <div class="project-description">
-
-          <span class="project-status current-project">
-            Current project
-          </span>
-
-          <h4>
-            New climate extremes and the emergence of a “new normal”
-          </h4>
-
-          <p>
-            NOMOS investigates how climatic and hydrological extremes that were
-            previously considered exceptional may increasingly become recurring
-            or characteristic features of changing climate regimes.
-          </p>
-
-          <p>
-            My work focuses on the interdisciplinary conceptualisation of the
-            “new normal,” including how it is defined, detected, and interpreted
-            across different scientific fields. I examine the transition from
-            historical variability to emerging extreme conditions and consider
-            the implications for hydrological systems, ecosystems, infrastructure,
-            and long-term adaptation.
-          </p>
-
-          <div class="project-topics">
-            <span>Climate extremes</span>
-            <span>Ecohydrology</span>
-            <span>New normal</span>
-            <span>Systematic review</span>
-            <span>Climate adaptation</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </details>
-
-
-    <!-- SOILWISE -->
-    <details class="project-item">
-
-      <summary class="project-summary">
-
-        <div class="project-number">
-          02
-        </div>
-
-        <div class="project-summary-text">
-          <span class="project-period">2025–2026</span>
-          <h3>SoilWise</h3>
-
-          <p>
-            Impact Assessment Research Group · Leibniz Centre for
-            Agricultural Landscape Research (ZALF), Germany
-          </p>
-        </div>
-
-        <span class="project-toggle">
-          +
-        </span>
-
-      </summary>
-
-      <div class="project-content">
-
-        <div class="project-visual">
-          <img
-            src="soilwise-project.png"
-            alt="Visual representation of the SoilWise research project">
-        </div>
-
-        <div class="project-description">
-
-          <span class="project-status">
-            European research project
-          </span>
-
-          <h4>
-            Soil knowledge, long-term experiments, and impact assessment
-          </h4>
-
-          <p>
-            SoilWise supports the development of accessible and harmonised soil
-            knowledge for research, policy, and sustainable land management.
-          </p>
-
-          <p>
-            My contributions focused on the assessment and documentation of
-            long-term agricultural experiments, research data structures, and
-            approaches for improving the usability of soil-related information.
-            This work connected scientific evidence, metadata organisation, and
-            impact-oriented knowledge exchange.
-          </p>
-
-          <div class="project-topics">
-            <span>Soil knowledge</span>
-            <span>Long-term experiments</span>
-            <span>Metadata</span>
-            <span>Impact assessment</span>
-            <span>Knowledge systems</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </details>
-
-
-    <!-- ICAW2 -->
-    <details class="project-item">
-
-      <summary class="project-summary">
-
-        <div class="project-number">
-          03
-        </div>
-
-        <div class="project-summary-text">
-          <span class="project-period">2021–2025</span>
-          <h3>ICaW2</h3>
-
-          <p>
-            Data and Simulation Research Group · Leibniz Centre for
-            Agricultural Landscape Research (ZALF), Germany
-          </p>
-        </div>
-
-        <span class="project-toggle">
-          +
-        </span>
-
-      </summary>
-
-      <div class="project-content">
-
-        <div class="project-visual">
-          <img
-            src="icaw2-project.png"
-            alt="Visual representation of the ICaW2 research project">
-        </div>
-
-        <div class="project-description">
-
-          <span class="project-status">
-            Doctoral research project
-          </span>
-
-          <h4>
-            Modelling wet-grassland productivity and biogeochemical fluxes
-          </h4>
-
-          <p>
-            Within ICaW2, I investigated how groundwater conditions, climate,
-            vegetation dynamics, and management affect wet-grassland productivity
-            and biogeochemical processes.
-          </p>
-
-          <p>
-            Using process-based agroecosystem modelling, environmental
-            observations, and climate scenarios, I evaluated biomass production
-            as well as water, carbon, and nitrogen fluxes under contrasting
-            groundwater regimes. The project formed the principal scientific
-            framework of my doctoral research.
-          </p>
-
-          <div class="project-topics">
-            <span>MONICA model</span>
-            <span>Wet grasslands</span>
-            <span>Groundwater</span>
-            <span>Carbon and nitrogen</span>
-            <span>Climate scenarios</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </details>
-
-
-    <!-- LYSIWATER -->
-    <details class="project-item">
-
-      <summary class="project-summary">
-
-        <div class="project-number">
-          04
-        </div>
-
-        <div class="project-summary-text">
-          <span class="project-period">2019–2021</span>
-          <h3>LysiWater</h3>
-
-          <p>
-            Hydrology Research Group · Agricultural Research, Education and
-            Extension Organization (AREEO), Iran
-          </p>
-        </div>
-
-        <span class="project-toggle">
-          +
-        </span>
-
-      </summary>
-
-      <div class="project-content">
-
-        <div class="project-visual">
-          <img
-            src="lysiwater-project.png"
-            alt="Visual representation of the LysiWater research project">
-        </div>
-
-        <div class="project-description">
-
-          <span class="project-status">
-            Agricultural water research
-          </span>
-
-          <h4>
-            Lysimeter-based assessment of crop water requirements
-          </h4>
-
-          <p>
-            LysiWater focused on the measurement and evaluation of crop water
-            requirements under semi-arid environmental conditions using
-            lysimeter experiments.
-          </p>
-
-          <p>
-            My research contributed to estimating evapotranspiration, irrigation
-            demand, and crop coefficients. This work established the experimental
-            and hydrological foundation for my later research on soil–water–plant
-            interactions and process-based environmental modelling.
-          </p>
-
-          <div class="project-topics">
-            <span>Lysimeters</span>
-            <span>Crop water requirement</span>
-            <span>Evapotranspiration</span>
-            <span>Irrigation</span>
-            <span>Hydrology</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </details>
-
-  </div>
-
-</section>
-```
-
-</section>
-<section class="publications-section" id="publications">
-
-  <h2>Selected Publications</h2>
-
-<div class="publication-card">
-
-  <h3>
-    The sensitivity of shallow-groundwater grasslands to changes in climate and groundwater management
-  </h3>
-
-  <p class="pub-authors">
-    Khaledi, V., Raza, A., Taubert, F., et al., Nendel, C.
-  </p>
-
-  <p class="pub-journal">
-    Agricultural Water Management · 2026
-  </p>
-
-  <a class="pub-button"
-     href="https://www.sciencedirect.com/science/article/pii/S0378377426003604"
-     target="_blank"
-     rel="noopener noreferrer">
-    View Publication
-  </a>
-
-</div>
-  <div class="publication-card">
-
-  <h3>
-    Modelling wet grassland biogeochemical fluxes and productivity for climate change mitigation
-  </h3>
-
-  <p class="pub-authors">
-    Khaledi, V.
-  </p>
-
-  <p class="pub-journal">
-    Doctoral Dissertation · University of Potsdam
-  </p>
-
-  <a class="pub-button"
-     href="https://publishup.uni-potsdam.de/frontdoor/index/index/docId/69793"
-     target="_blank"
-     rel="noopener noreferrer">
-    View Thesis
-  </a>
-
-</div>
-
-  <div class="publication-card">
-
-    <h3>
-      Evaluating MONICA's capability to simulate water, carbon and nitrogen fluxes in a wet grassland at contrasting water tables
-    </h3>
-
-    <p class="pub-authors">
-      Khaledi, V., Baatz, R., Antonijević, D., Hoffmann, M., Dietrich, O., Lischeid, G., & Nendel, C.
-    </p>
-
-    <p class="pub-journal">
-      Science of the Total Environment · 2024
-    </p>
-
-    <a class="pub-button"
-       href="https://doi.org/10.1016/j.scitotenv.2024.174995"
-       target="_blank">
-       View Publication
-    </a>
-
-  </div>
-
-  <div class="publication-card">
-
-    <h3>
-      Challenges of Including Wet Grasslands with Variable Groundwater Tables in Large-Area Crop Production Simulations
-    </h3>
-
-    <p class="pub-authors">
-      Khaledi, V., Kamali, B., Lischeid, G., Dietrich, O., Davies, M. F., & Nendel, C.
-    </p>
-
-    <p class="pub-journal">
-      Agriculture · 2024
-    </p>
-
-    <a class="pub-button"
-       href="https://doi.org/10.3390/agriculture14050679"
-       target="_blank">
-       View Publication
-    </a>
-
-  </div>
-
-  <div class="publication-card">
-
-    <h3>
-      Wet grassland biomass yield prediction considering species composition dynamic
-    </h3>
-
-    <p class="pub-authors">
-      Khaledi, V., Lischeid, G., Kamali, B., Dietrich, O., & Nendel, C.
-    </p>
-
-    <p class="pub-journal">
-      EGU General Assembly · 2023
-    </p>
-
-    <a class="pub-button"
-       href="https://doi.org/10.5194/egusphere-egu23-9070"
-       target="_blank">
-       View Publication
-    </a>
-
-  </div>
-
-  <div class="publication-card">
-
-    <h3>
-      Determination of water requirement and crop coefficient for strawberry using lysimeter experiment in a semi-arid climate
-    </h3>
-
-    <p class="pub-authors">
-      Amini, A., Karami, F., Sedri, M. H., & Khaledi, V.
-    </p>
-
-    <p class="pub-journal">
-      H2Open Journal · 2022
-    </p>
-
-    <a class="pub-button"
-       href="https://doi.org/10.2166/h2oj.2022.030"
-       target="_blank">
-       View Publication
-    </a>
-
-  </div>
-
-</section>
-  <section class="contact-section" id="contact">
-
-  <h2>Contact</h2>
-
-  <div class="contact-links">
-
-    <a href="mailto:Valeh.khaledi@tu-berlin.de">
-      Email
-    </a>
-
-    <a href="https://github.com/Vala-kh" target="_blank">
-      GitHub
-    </a>
-<a href="https://www.linkedin.com/in/valeh-khaledi-b57b64131/" target="_blank">
-  LinkedIn
-    </a>
-
-<a href="https://scholar.google.com/citations?user=G4EZCBEAAAAJ&hl=en" target="_blank">
-  Google Scholar
-    </a>
-
-<a href="https://www.researchgate.net/profile/Valeh-Khaledi?ev=hdr_xprf&amp;_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoiaG9tZSIsInBvc2l0aW9uIjoiZ2xvYmFsSGVhZGVyIn19"
-   target="_blank"
-   rel="noopener noreferrer">
-  ResearchGate
-</a>
-
-  </div>
-
-</section>
-<footer class="footer">
-
-  <p>
-    © 2026 Valeh Khaledi · Agroecosystem Modelling · Hydrology · TU Berlin
-  </p>
-
-</footer>
 </body>
 
 </html>
+```
