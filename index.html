@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -418,7 +417,6 @@
       display: block;
       width: 100%;
       height: auto;
-      max-height: none;
       object-fit: contain;
       background-color: white;
       border-radius: 18px;
@@ -432,6 +430,75 @@
       font-size: 14px;
       line-height: 1.5;
       text-align: center;
+    }
+
+    /* SOILWISE MEDIA */
+
+    .project-media {
+      margin-top: 35px;
+      padding-top: 28px;
+      border-top: 1px solid #dfe7dc;
+    }
+
+    .project-media h5 {
+      margin: 0 0 10px 0;
+      color: #1f2d1f;
+      font-size: 20px;
+    }
+
+    .project-media-intro {
+      margin-bottom: 20px !important;
+      color: #667166 !important;
+      font-size: 15px !important;
+    }
+
+    .media-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .media-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 20px;
+      color: #334333;
+      background-color: #f5f7f2;
+      border: 1px solid #dce5d9;
+      border-radius: 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .media-card:hover {
+      transform: translateY(-4px);
+      background-color: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+    }
+
+    .media-type {
+      color: #6a8b6a;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+    }
+
+    .media-card strong {
+      color: #355e3b;
+      font-size: 17px;
+      line-height: 1.4;
+    }
+
+    .media-card span {
+      line-height: 1.55;
+    }
+
+    .media-action {
+      margin-top: auto;
+      padding-top: 5px;
+      color: #355e3b;
+      font-weight: 700;
     }
 
     /* PUBLICATIONS */
@@ -613,6 +680,12 @@
       }
     }
 
+    @media (max-width: 700px) {
+      .media-links {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 520px) {
       .navbar {
         font-size: 15px;
@@ -715,7 +788,7 @@
         </div>
 
         <div class="card">
-          <h3>Hydrology & Groundwater</h3>
+          <h3>Hydrology &amp; Groundwater</h3>
 
           <p>
             Exploring how groundwater dynamics influence ecosystem
@@ -944,6 +1017,74 @@
                 <span>Knowledge systems</span>
               </div>
 
+              <div class="project-media">
+
+                <h5>Training &amp; Demonstrations</h5>
+
+                <p class="project-media-intro">
+                  Selected SoilWise training sessions in which I contributed
+                  to demonstrating practical applications of soil data,
+                  FAIR principles, and knowledge reuse.
+                </p>
+
+                <div class="media-links">
+
+                  <a
+                    class="media-card"
+                    href="https://www.youtube.com/watch?v=ird0IUoHpWg&amp;t=651s"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="media-type">
+                      VIDEO · SOILL-STARTUP TRAINING
+                    </span>
+
+                    <strong>
+                      SoilWise Demo Session for Living Labs
+                    </strong>
+
+                    <span>
+                      Soil Health Monitoring training on accessing public soil
+                      datasets, interpreting soil information, and translating
+                      data into practical impact.
+                    </span>
+
+                    <span class="media-action">
+                      Watch training →
+                    </span>
+
+                  </a>
+
+                  <a
+                    class="media-card"
+                    href="https://www.youtube.com/watch?v=xRkN4vv3H5U&amp;t=1550s"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="media-type">
+                      VIDEO · FAIR SOIL DATA
+                    </span>
+
+                    <strong>
+                      FAIR Soil Data in Practice
+                    </strong>
+
+                    <span>
+                      SoilWise tools for FAIR soil data and knowledge management.
+                      The link opens directly at my Success Story contribution
+                      at 25:50.
+                    </span>
+
+                    <span class="media-action">
+                      Watch my contribution →
+                    </span>
+
+                  </a>
+
+                </div>
+
+              </div>
+
             </div>
 
             <div class="project-visual">
@@ -1107,7 +1248,7 @@
                 irrigation demand, canopy development, and crop coefficients
                 for strawberry. This work established the experimental and
                 hydrological foundation for my later research on
-                soil–water–plant interactions and process-based environmental
+                soil-water-plant interactions and process-based environmental
                 modelling.
               </p>
 
@@ -1364,4 +1505,3 @@
 </body>
 
 </html>
-```
